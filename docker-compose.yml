@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  sys-info:
+    build: .
+    container_name: sys-info-app
+    command: ["-a"]
