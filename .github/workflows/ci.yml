@@ -29,3 +29,8 @@ jobs:
         run: |
           docker-compose up --build -d
           docker-compose ps
+
+      - name: Run ShellCheck
+        run: |
+          sudo apt-get install -y shellcheck
+          shellcheck sys_info.sh
