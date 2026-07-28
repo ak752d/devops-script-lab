@@ -23,12 +23,12 @@ jobs:
 
       - name: Test Docker Container
         run: |
-          docker run --rm sys-info-app -d
+          docker run --rm sys-info-app -a
 
       - name: Test Docker Compose
         run: |
-          docker-compose up --build -d
-          docker-compose ps
+          cp .env.example .env
+          docker compose up --build
 
       - name: Run ShellCheck
         run: |
