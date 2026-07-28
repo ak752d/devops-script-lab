@@ -4,4 +4,6 @@ services:
   sys-info:
     build: .
     container_name: sys-info-app
+    env_file:
+      - .env
     command: ["-a"]
