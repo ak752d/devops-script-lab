@@ -24,3 +24,8 @@ jobs:
       - name: Test Docker Container
         run: |
           docker run --rm sys-info-app -d
+
+      - name: Test Docker Compose
+        run: |
+          docker-compose up --build -d
+          docker-compose ps
